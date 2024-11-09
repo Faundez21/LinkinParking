@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="LinkinParking.MainPage"
+    BackgroundColor="#A8C3D1">
+
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="2*" />
+            </Grid.ColumnDefinitions>
+
+        <VerticalStackLayout
+            Padding="56"
+            Spacing="20"
+            HorizontalOptions="Center"
+            VerticalOptions="Center"
+            Grid.Column="0">
+
+            <Frame CornerRadius="10" Padding="20" BackgroundColor="White" HasShadow="True">
+                    <VerticalStackLayout Spacing="10">
+                    <Image
+                Source="logo.png"
+                HeightRequest="120"
+                HorizontalOptions="Center" />
+                    <Label  
+                        Text="Login"
+                        FontSize="32"
+                        HorizontalOptions="Start"
+                        TextColor="#333" />
+
+                        <Label
+                        Text="Solicitar Ayuda"
+                        FontSize="12"
+                        HorizontalOptions="End"
+                        TextColor="Red"
+                     />
+
+                        <Entry x:Name="UsernameEntry"
+                           Placeholder="Username"
+                           PlaceholderColor="#888"
+                           TextColor="#333"
+                           BackgroundColor="#f0f0f0"
+                           HeightRequest="50"
+                           />
+
+                        <Entry x:Name="PasswordEntry"
+                           Placeholder="Password"
+                           PlaceholderColor="#777"
+                           TextColor="#333"
+                           IsPassword="True"
+                           BackgroundColor="#f0f0f0"
+                           HeightRequest="50"
+                            />
+
+                        <Label
+                        Text="¿Olvidaste tu contraseña?"
+                        FontSize="12"
+                        HorizontalOptions="Center"
+                        TextColor="#333"
+                       />
+
+                    <Button
+                        x:Name="Iniciar"
+                        Text="Iniciar Sesión"
+                        TextColor="White"
+                        BackgroundColor="#0056D2"
+                        CornerRadius="25"
+                        HeightRequest="50"
+                        FontAttributes="Bold"
+                        HorizontalOptions="Fill" />
+                </VerticalStackLayout>
+                </Frame>
+            </VerticalStackLayout>
+
+            <Image
+            Source="autos.png"
+            HeightRequest="500"
+            HorizontalOptions="Center"
+            VerticalOptions="Center"
+            Grid.Column="1" />
+        </Grid>
+
+    </ContentPage>

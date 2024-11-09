@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiApp2.MainPage"
+             BackgroundColor="LightCyan">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="2.5*" />
+            <ColumnDefinition Width="7*" />
+        </Grid.ColumnDefinitions>
+
+        <VerticalStackLayout
+            Padding="30"
+            Spacing="20"
+            HorizontalOptions="Fill"
+            VerticalOptions="Center"
+            Grid.Column="0"
+            BackgroundColor="LightBlue"
+            Margin="10">
+
+            <Image
+                Source="logo.png"
+                HeightRequest="100"
+                HorizontalOptions="Center" />
+
+
+            <HorizontalStackLayout
+                Spacing="2"
+                HorizontalOptions="Center">
+
+                <Image
+                    Source="agendar.png"
+                    HeightRequest="30"
+                    WidthRequest="50" />
+
+                <Button
+                    x:Name="es"
+                    Text="Agendar"
+                    TextColor="White"
+                    BackgroundColor="Navy"
+                    CornerRadius="20"
+                    HeightRequest="40"
+                    FontAttributes="Bold" />
+            </HorizontalStackLayout>
+
+            <HorizontalStackLayout
+                Spacing="10"
+                HorizontalOptions="Center">
+
+                <Image
+                    Source="candado.png"
+                    HeightRequest="30"
+                    WidthRequest="30" />
+
+                <Button
+                    x:Name="pa"
+                    Text="Liberar"
+                    TextColor="White"
+                    BackgroundColor="Navy"
+                    CornerRadius="20"
+                    HeightRequest="40"
+                    FontAttributes="Bold" />
+            </HorizontalStackLayout>
+
+            <HorizontalStackLayout
+                Spacing="10"
+                HorizontalOptions="Center">
+
+                <Image
+                    Source="usuario.png"
+                    HeightRequest="40"
+                    WidthRequest="40" />
+
+                <Label
+                    x:Name="NombredelEmpledo"
+                    VerticalTextAlignment="Center"
+                    Text="Nombre Empleado"
+                    TextColor="Black"
+                    FontSize="Medium" />
+            </HorizontalStackLayout>
+        </VerticalStackLayout>
+
+        <Image
+            Source="estacionamiento.png"
+            Grid.Column="1"
+            HorizontalOptions="Center"
+            VerticalOptions="Center"
+            HeightRequest="400"
+            Margin="10" />
+    </Grid>
+
+</ContentPage>

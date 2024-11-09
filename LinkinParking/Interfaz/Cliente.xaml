@@ -1,0 +1,111 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiApp2.MainPage"
+             BackgroundColor="LightCyan">
+
+    <VerticalStackLayout
+        Padding="30"
+        Spacing="20"
+        HorizontalOptions="Center"
+        VerticalOptions="Center">
+
+        <!-- Sección de Notificación -->
+        <VerticalStackLayout
+            BackgroundColor="LightBlue"
+            Padding="20"
+            Margin="10"
+            Spacing="20"
+            HorizontalOptions="FillAndExpand"
+            VerticalOptions="Center">
+
+            <Image
+                Source="logo.png"
+                HeightRequest="100"
+                HorizontalOptions="Center" />
+
+            <Label
+                Text="Su vehículo fue aparcado en el Puesto A2"
+                FontSize="Medium"
+                HorizontalOptions="Center"
+                TextColor="Black" />
+
+            <Button
+                Text="Aceptar"
+                TextColor="White"
+                BackgroundColor="Green"
+                CornerRadius="20"
+                WidthRequest="150"
+                HeightRequest="50"
+                HorizontalOptions="Center" />
+        </VerticalStackLayout>
+
+        <!-- Sección Original -->
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="2.5*" />
+                <ColumnDefinition Width="7*" />
+            </Grid.ColumnDefinitions>
+
+            <VerticalStackLayout
+                Padding="30"
+                Spacing="20"
+                HorizontalOptions="Fill"
+                VerticalOptions="Center"
+                Grid.Column="0"
+                BackgroundColor="LightBlue"
+                Margin="10">
+
+                <Image
+                    Source="logo.png"
+                    HeightRequest="100"
+                    HorizontalOptions="Center" />
+
+                <HorizontalStackLayout
+                    Spacing="2"
+                    HorizontalOptions="Center">
+
+                    <Button
+                        x:Name="es"
+                        Text="Estimado"
+                        TextColor="White"
+                        BackgroundColor="Navy"
+                        CornerRadius="20"
+                        HeightRequest="40"
+                        FontAttributes="Bold" />
+                    <Image
+                        Source="dinerillo.png"
+                        HeightRequest="30"
+                        WidthRequest="50" />
+                </HorizontalStackLayout>
+
+                <HorizontalStackLayout
+                    Spacing="10"
+                    HorizontalOptions="Center">
+
+                    <Button
+                        x:Name="pa"
+                        Text="Pagar"
+                        TextColor="White"
+                        BackgroundColor="Navy"
+                        CornerRadius="20"
+                        HeightRequest="40"
+                        FontAttributes="Bold" />
+                    <Image
+                        Source="candado.png"
+                        HeightRequest="30"
+                        WidthRequest="30" />
+                </HorizontalStackLayout>
+            </VerticalStackLayout>
+
+            <Image
+                Source="estacionamiento.png"
+                Grid.Column="1"
+                HorizontalOptions="Center"
+                VerticalOptions="Center"
+                HeightRequest="400"
+                Margin="10" />
+        </Grid>
+    </VerticalStackLayout>
+
+</ContentPage>
